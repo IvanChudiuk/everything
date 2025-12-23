@@ -25,12 +25,15 @@ def get_random_dog_image(url: str) -> str:
         response.raise_for_status()  # Raises an HTTPError for bad responses
         data = response.json()
         logger.info(f"Random Dog Image URL: {data['message']}")
+        return data["message"]
     except requests.exceptions.RequestException as e:
         logger.error(f"Network error occurred: {e}")
     except ValueError as e:
         logger.error(f"Error parsing JSON: {e}")
     except KeyError as e:
         logger.error(f"Unexpected response structure: {e}")
+    except Exception as e:
+        logger.error(f"An unexpected error occurred: {e}")
 
 
 if __name__ == "__main__":
