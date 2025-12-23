@@ -1,12 +1,20 @@
 import requests
 
 from config import app_config
+from modules import logger
+
+logger = logger.Logger(
+    name=app_config["logging"]["name"],
+    level=app_config["logging"]["level"],
+    log_file=app_config["logging"]["file"],
+    format_str=app_config["logging"]["format"],
+)
 
 
 def get_random_dog_image(url: str) -> str:
     """
     Fetches a link to the random dog image from the provided URL.
-    
+
     Args:
         url (str): a link to the data source with random pictures of dogs
     Returns:
@@ -16,16 +24,14 @@ def get_random_dog_image(url: str) -> str:
         response = requests.get(url)
         response.raise_for_status()  # Raises an HTTPError for bad responses
         data = response.json()
-        print("Random Dog Image URL:", data["message"])
+        logger.info(f"Random Dog Image URL: {data['message']}")
     except requests.exceptions.RequestException as e:
-        print(f"Network error occurred: {e}")
+        logger.error(f"Network error occurred: {e}")
     except ValueError as e:
-        print(f"Error parsing JSON: {e}")
+        logger.error(f"Error parsing JSON: {e}")
     except KeyError as e:
-        print(f"Unexpected response structure: {e}")
+        logger.error(f"Unexpected response structure: {e}")
 
 
 if __name__ == "__main__":
-    get_random_dog_image(
-        url=app_config["SOURCE_URL"]
-        )
+    get_random_dog_image(url=app_config["SOURCE_URL"])
