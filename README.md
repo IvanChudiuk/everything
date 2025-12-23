@@ -10,12 +10,15 @@
 
 ---
 
-## 📦 Installation
+## 📦 Installation (Ubuntu or WSL)
+
+If you're on Windows, open your project inside **WSL Ubuntu** and run:
 
 ```bash
 git clone https://github.com/IvanChudiuk/everything.git
-cd yourrepo
-python -m venv env
+cd everything
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -39,7 +42,7 @@ everything/
 ├── modules/
 │ └── logger.py
 ├── logs/
-├── env/
+├── venv/
 ├── requirements.txt
 ├── run.py
 └── README.md
