@@ -27,7 +27,7 @@ pip install -r requirements.txt
 ## ▶️ Usage
 
 ```bash
-python run.py
+python get_random_doc_picture/run.py
 ```
 
 ## ⚙️ Configuration
@@ -36,14 +36,12 @@ python run.py
 ## 📁 Project Structure
 
 ```
-everything/
+get_random_doc_picture/
 ├── config/
 ├── tests/
 ├── modules/
 │ └── logger.py
 ├── logs/
-├── venv/
-├── requirements.txt
 ├── run.py
 └── README.md
 ```
@@ -53,6 +51,7 @@ everything/
 ## 🧪 Running Tests
 
 ```bash
+cd everything/get_random_doc_picture
 pytest
 ```
 

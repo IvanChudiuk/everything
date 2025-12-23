@@ -1,4 +1,8 @@
+from pathlib import Path
 import yaml
 
-with open("config/config.yaml", "r") as file:
+BASE_DIR = Path(__file__).resolve().parent
+config_path = f"{BASE_DIR}/config.yaml"
+
+with open(config_path, "r") as file:
     app_config = yaml.safe_load(file)

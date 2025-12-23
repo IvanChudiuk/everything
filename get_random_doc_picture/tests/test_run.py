@@ -1,6 +1,6 @@
 from unittest.mock import patch, MagicMock
 
-from run_get_random_doc_image import get_random_dog_image
+from run import get_random_dog_image
 
 
 @patch("run.requests.get")
