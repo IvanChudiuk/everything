@@ -1,6 +1,6 @@
 # 🚀 All personal small fun projects
 
-...
+get_random_doc_picture - a small app to fetch url of some random doc pictures
 
 ---
 

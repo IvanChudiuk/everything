@@ -3,5 +3,5 @@ SOURCE_URL: https://dog.ceo/api/breeds/image/random
 logging:
   name: app_logger
   level: INFO
-  file: logs/app.log
+  file: get_random_doc_picture/logs/app.log
   format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
