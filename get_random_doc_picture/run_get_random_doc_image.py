@@ -1,10 +1,11 @@
 import requests
+import os
 
 from config import app_config
 from modules import logger
 
 logger = logger.Logger(
-    name=app_config["logging"]["name"],
+    name=os.path.basename(__file__),
     level=app_config["logging"]["level"],
     log_file=app_config["logging"]["file"],
     format_str=app_config["logging"]["format"],
