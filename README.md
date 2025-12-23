@@ -5,7 +5,8 @@
 ---
 
 ## ✨ Features
-- ...
+
+...
 
 ---
 
@@ -32,14 +33,16 @@ python run.py
 ## 📁 Project Structure
 
 ```
-yourproject/
-│── config/
-│── tests/
-│── logs/
-│── env/
-│── requirements.txt
-│── run.py
-│── README.md
+everything/
+├── config/
+├── tests/
+├── modules/
+│ └── logger.py
+├── logs/
+├── env/
+├── requirements.txt
+├── run.py
+└── README.md
 ```
 
 ---
